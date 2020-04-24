@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<TITLE>||| HOME |||</TITLE>
+<link rel="shortcut icon" href="favicon.ico"></link>
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Titillium+Web:wght@600&display=swap" rel="stylesheet">
+
+    <Style>
+    *{
+        font-family: 'Titillium Web', sans-serif;
+        font-family: 'Lobster', cursive !Important;
+
+    }   
+	</Style>  
+
+
+<style>
+.button_login{
+border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; text-align: center; color: #FFFFFF; background-color: #3093c7;
+ background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3093c7), color-stop(100%, #1c5a85));
+ background-image: -webkit-linear-gradient(top, #3093c7, #1c5a85);
+ background-image: -moz-linear-gradient(top, #3093c7, #1c5a85);
+ background-image: -ms-linear-gradient(top, #3093c7, #1c5a85);
+ background-image: -o-linear-gradient(top, #3093c7, #1c5a85);
+ background-image: linear-gradient(top, #3093c7, #1c5a85);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#3093c7, endColorstr=#1c5a85);
+}
+
+.button_login:hover{
+ border:1px solid #1c5675; background-color: #26759e;
+ background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#26759e), color-stop(100%, #133d5b));
+ background-image: -webkit-linear-gradient(top, #26759e, #133d5b);
+ background-image: -moz-linear-gradient(top, #26759e, #133d5b);
+ background-image: -ms-linear-gradient(top, #26759e, #133d5b);
+ background-image: -o-linear-gradient(top, #26759e, #133d5b);
+ background-image: linear-gradient(top, #26759e, #133d5b);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#26759e, endColorstr=#133d5b);
+}</style>
+
+<script type="text/javascript">
+	function authPass(u,p) {
+	if (u && p) self.location = "auth.html?" + u + p;
+	return false;
+	}
+</script>
+</head>
+         <script language="javascript">
+        
+         function seriouscase()
+    {
+            num1 = document.getElementById("midCase").value;
+            num2 = document.getElementById("serious").value;
+            document.getElementById("result").innerHTML = num2 / num1 * 100;
+    }
+          
+          
+          function mildCase()
+    {
+            num1 = document.getElementById("midCase").value;
+            num2 = document.getElementById("serious").value;
+            document.getElementById("result").innerHTML = num1 / num2 ;
+    }
+    
+
+    function multiplyBy1()
+    {
+            death = document.getElementById("death").value;
+            tcase = document.getElementById("tcase").value;
+            document.getElementById("result1").innerHTML = death / tcase * 100;
+    }
+
+
+
+    function allcasetotal()
+              { 
+            totalcase = document.getElementById("total").value;
+            newcase = document.getElementById("ncase").value;
+            tdeath = document.getElementById("tdeath").value;
+            trecover = document.getElementById("trecov").value;
+
+            document.getElementById("result2").innerHTML = ((tdeath / totalcase) * 100) ;
+              }
+
+
+    function alltotal()
+    {
+           totalcase = document.getElementById("total").value;
+           newcase = document.getElementById("ncase").value;
+           tdeath = document.getElementById("tdeath").value;
+          trecover = document.getElementById("trecov").value;
+
+          document.getElementById("result3").innerHTML = totalcase - trecover - tdeath + newcase ;
+           //'totalcase - tdeath - trecover';
+    }
+
+         </script>
+    
+    
+    </head>
+    
+    <style type="text/css">
+    body {margin: 30px;}
+    </style> 
+    </head>
+    <body>
+        <div><h3>
+            <strong>
+                <br>	<center>WEL-COME TO SURAJ CHAPAGAIN PAGE.</h3></div></center></strong>
+                <a href="index.html"><input type="submit" class="button_login" value="HOME"/></a>
+                <a href="covid.html"><input type="submit" class="button_login" value="COVID"/></a>
+    <br>
+    
+    <B>ACTIVE CASES</B>
+    
+    <p>
+    <form>
+    Mild Condition : <input type="text" id="midCase" /><p>
+    Serious or Critical : <input type="text" id="serious" /><p>
+    <input type="button" onClick="seriouscase()" Value="Critical" />
+    <input type="button" onClick="mildCase()" Value="Mild Condition" />
+    <input type="reset" Value="Reset" />
+    </form>
+    <p>The Result is : <br>
+    <span id = "result"></span>
+    </p>
+    -----------------------------------------------------<br>
+   
+ 
+    <B>Reported Cases and Deaths</B>
+    <p>
+    <form>
+    Total Deaths : <input type="text" id="death" /><p>
+    Total Cases: <input type="text" id="tcase" /><p>
+    <input type="button" onClick="multiplyBy1()" Value="Calculate" />
+    <input type="reset" Value="Reset" />
+    </form>
+    <p>The Result is : %<br>
+    <span id = "result1"></span>
+    </p>
+    -----------------------------------------------------<br>
+
+    <B>Reported Total Cases New and Deaths</B>
+    <p>
+    <form>
+    Total Cases: <input type="text" id="total" /><p>
+    New Cases: <input type="text" id="ncase" /><p> 
+    Total Deaths : <input type="text" id="tdeath" /><p>
+    Total Recovered : <input type="text" id="trecov" /><p></p>
+    <input type="button" onClick="allcasetotal()" Value="Calculate" />
+    <input type="button" onClick="alltotal()" Value="TOTAL CASES" />
+    <input type="reset" Value="Reset" />
+    </form>
+    <p>The Result is of Active Case are: <br>
+    <span id = "result2"></span> &nbsp;&nbsp;&nbsp; / &nbsp;&nbsp;&nbsp;
+    <span id = "result3"></span> 
+    
+    </p>
+    -----------------------------------------------------<br>
+      <!-- 
+    <B>THE TOTAL PREMIUM IS </B><br>
+    
+    <p>
+    <form>
+    TOTAL PREMIUM : <input type="text" id="fiveNumber" /><p>
+    Discount Premium: <input type="text" id="sixNumber" /><p>
+    <input type="button" onClick="totalPremium()" Value="TOTAL AMOUNT" />
+    </form>
+    <p>The Result is : <br>
+    <span id = "result2"></span>
+    </p>
+    -->
+    </body>
+    
+    </html>
+    
+    
+    
+    
+    
+    <!--Discount : <input type="text" id="thirdNumber" /><br>
+    3nd Number: <input type="text" id="thirdNumber" /><br> -->
+    <!--<input type="reset" onClick="divideBy()" Value="Divide" /> -->
