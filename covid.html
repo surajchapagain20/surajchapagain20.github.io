@@ -82,25 +82,25 @@ border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;bo
     function allcasetotal()
               { 
             totalcase = document.getElementById("total").value;
-            newcase = document.getElementById("ncase").value;
+           //newcase = document.getElementById("ncase").value;
             tdeath = document.getElementById("tdeath").value;
             trecover = document.getElementById("trecov").value;
 
-            document.getElementById("result2").innerHTML = ((tdeath / totalcase) * 100) ;
-              }
+            document.getElementById("result2").innerHTML = ((tdeath / totalcase) * 100) + ' %';
+            document.getElementById("result3").innerHTML = ((totalcase ) - ((trecover)));
+        }
 
 
-    function alltotal()
-    {
-           totalcase = document.getElementById("total").value;
-           newcase = document.getElementById("ncase").value;
-           tdeath = document.getElementById("tdeath").value;
-          trecover = document.getElementById("trecov").value;
+            //  function alltotal()
+   // {
+     //      totalcase = document.getElementById("total").value;
+     //      newcase = document.getElementById("ncase").value;
+     //      tdeath = document.getElementById("tdeath").value;
+     //     trecover = document.getElementById("trecov").value;
 
-          document.getElementById("result3").innerHTML = totalcase - trecover - tdeath + newcase ;
+      //    document.getElementById("result3").innerHTML = trecover - tdeath + newcase ;
            //'totalcase - tdeath - trecover';
-    }
-
+   // }
          </script>
     
     
@@ -151,12 +151,11 @@ border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;bo
     <p>
     <form>
     Total Cases: <input type="text" id="total" /><p>
-    New Cases: <input type="text" id="ncase" /><p> 
+    <!--  New Cases: <input type="text" id="ncase" /><p> -->
     Total Deaths : <input type="text" id="tdeath" /><p>
     Total Recovered : <input type="text" id="trecov" /><p></p>
-    <input type="button" onClick="allcasetotal()" Value="Calculate" />
-    <input type="button" onClick="alltotal()" Value="TOTAL CASES" />
-    <input type="reset" Value="Reset" />
+    <input type="button" onClick="allcasetotal()" Value="Calculate_" />
+     <input type="reset" Value="Reset" />
     </form>
     <p>The Result is of Active Case are: <br>
     <span id = "result2"></span> &nbsp;&nbsp;&nbsp; / &nbsp;&nbsp;&nbsp;
@@ -187,4 +186,23 @@ border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;bo
     
     <!--Discount : <input type="text" id="thirdNumber" /><br>
     3nd Number: <input type="text" id="thirdNumber" /><br> -->
-    <!--<input type="reset" onClick="divideBy()" Value="Divide" /> -->
+    <!--<input type="reset" onClick="divideBy()" Value="Divide" /> 
+    
+    function alltotal()
+    {
+        var totalcase,newcase,tdeath,trecover,totalvalue;
+
+           totalcase = number(document.getElementById("total").value);
+           newcase = number(document.getElementById("ncase").value);
+           tdeath = number(document.getElementById("tdeath").value);
+            trecover = number(document.getElementById("trecov").value);
+            
+            totalvalue = totalcase + newcase - trecover;
+
+          document.getElementById("result3").value= totalvalue;
+           // (totalcase + newcase )- (trecover - tdeath);
+           //((totalcase -- tdeath -- trecover) ++ newcase)
+    }
+    
+    
+    -->
