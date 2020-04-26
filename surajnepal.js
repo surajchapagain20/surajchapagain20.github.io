@@ -1,2 +1,2 @@
 auth = true;
-redirect = "covid.html";
+redirect = "corona.html";
