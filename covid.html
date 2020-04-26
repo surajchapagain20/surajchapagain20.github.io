@@ -54,23 +54,15 @@ border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;bo
     {
             num1 = document.getElementById("midCase").value;
             num2 = document.getElementById("serious").value;
-            document.getElementById("result").innerHTML = num2 / num1 * 100 + ' %';
-    }
-          
-          
-          function mildCase()
-    {
-            num1 = document.getElementById("midCase").value;
-            num2 = document.getElementById("serious").value;
-            document.getElementById("result").innerHTML = num1 / num2 + ' %';
+            document.getElementById("result4").innerHTML ='Mid Conditon: ' + num1 / num2 + ' %';
+            document.getElementById("result").innerHTML = 'Critical Case: ' + num2 / num1 * 100 + ' %';
     }
     
-
     function multiplyBy1()
     {
             death = document.getElementById("death").value;
             tcase = document.getElementById("tcase").value;
-            document.getElementById("result1").innerHTML = death / tcase * 100 + ' %';
+            document.getElementById("result1").innerHTML = 'Death Case: ' + death / tcase * 100 + ' %';
     }
 
 
@@ -82,126 +74,115 @@ border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;bo
             tdeath = document.getElementById("tdeath").value;
             trecover = document.getElementById("trecov").value;
 
-            document.getElementById("result2").innerHTML =  ((tdeath / totalcase) * 100) + ' %' ;
-           document.getElementById("result3").innerHTML = ((totalcase ) - ((trecover)));
+            document.getElementById("result2").innerHTML = 'Death Case: ' + ((tdeath / totalcase) * 100) + ' %' ;
+           document.getElementById("result3").innerHTML = 'Total No. Of Active Cases: ' + ((totalcase ) - ((trecover)));
 
         }
-            
-                   //  function alltotal()
-   // {
-     //      totalcase = document.getElementById("total").value;
-     //      newcase = document.getElementById("ncase").value;
-     //      tdeath = document.getElementById("tdeath").value;
-     //     trecover = document.getElementById("trecov").value;
-
-      //    document.getElementById("result3").innerHTML = trecover - tdeath + newcase ;
-           //'totalcase - tdeath - trecover';
-   // }
-         </script>
+     </script>
     
     
     </head>
-    
-    <style type="text/css">
-    body {margin: 30px;}
-    </style> 
-    </head>
+     </head>
     <body>
         <div><h3>
             <strong>
-                <br>	<center>WEL-COME TO SURAJ CHAPAGAIN PAGE.</h3></div></center></strong>
+                <center>WEL-COME TO SURAJ CHAPAGAIN PAGE.</h3></div></center></strong>
                 <a href="index.html"><input type="submit" class="button_login" value="HOME" /></a>
                 <a href="covid.html"><input type="submit" class="button_login" value="COVID" /></a>
                 <a href="#"><input type="submit" class="button_login" value="COVID NEW" /></a>
                 <a href="premium.html"><input type="submit" class="button_login" value="LIFE PREMIUM CALCULATOR" /></a>
     <br>
-    
-    <B>ACTIVE CASES</B>
-
-    
-    <p>
-    <form>
-    Mild Condition : <input type="text" id="midCase" /><p>
-    Serious or Critical : <input type="text" id="serious" /><p>
-    <input type="button" onClick="seriouscase()" Value="Critical" />
-    <input type="button" onClick="mildCase()" Value="Mild Condition"  />
-    <input type="reset" Value="Reset" />
-    </form>
-    <p>The Result is : <br>
-    <span id = "result" class="badge badge-success" ></span>
-    </p>
-    -----------------------------------------------------<br>
    
+    <div class="container-Fluid">
+      <br>
+      <h1>ACTIVE CASES</h1>
+      <div class="row">
+       <p></p><br>
+        <div class="col-sm-4" style="background-color:#3093c7;">
+          <p>Mild Condition : <input type="text" id="midCase" /><p></p>
+        
+          <input type="button" onClick="seriouscase()" Value="Calculate Percentage" />
+          <input type="reset" Value="Reset" />
+          <p></p>
+        </div>
+
+        <div class="col-sm-4" style="background-color:rgb(17, 64, 136);">
+          <p>Serious or Critical : <input type="text" id="serious" /><p></p>
+        </div>
+
+        <div class="col-sm-4" style="background-color:rgb(18, 196, 196);">
+        <p>The Result is : <br>
+          <span id = "result" class="badge badge-success" ></span>&nbsp;&nbsp;&nbsp; / &nbsp;&nbsp;&nbsp;
+          <span id = "result4" class="badge badge-info" ></span> 
+        </div>
+      </div>
+    </div>
+    
+   -----------------------------------------------------<br>
+     
+   <div class="container-Fluid">
+    <br>
+    <h1>Reported Cases and Deaths</h1>
+    <div class="row">
+     
+      <div class="col-sm-4" style="background-color:#3093c7;">
+        <p>Total Deaths : <input type="text" id="death" /><p>
+      
+          <input type="button" onClick="multiplyBy1()" Value="Calculate" />
+          <input type="reset" Value="Reset" />
+        <p></p>
+      </div>
+
+      <div class="col-sm-4" style="background-color:rgb(17, 64, 136);">
+        <p>Total Cases: <input type="text" id="tcase" /><p>
+      </div>
+
+      <div class="col-sm-4" style="background-color:rgb(18, 196, 196);">
+        <p>The Result is : <br>
+          <span id = "result1" class="badge badge-success" ></span>
+          </p>
+      </div>
+    </div>
+  </div>
  
-    <B>Reported Cases and Deaths</B>
-    <p>
-    <form>
-    Total Deaths : <input type="text" id="death" /><p>
-    Total Cases: <input type="text" id="tcase" /><p>
-    <input type="button" onClick="multiplyBy1()" Value="Calculate" />
-    <input type="reset" Value="Reset" />
-    </form>
-    <p>The Result is : <br>
-    <span id = "result1" class="badge badge-success" ></span>
-    </p>
     -----------------------------------------------------<br>
 
-    <B>Reported Total Cases New and Deaths</B>
-    <p>
-    <form>
-    Total Cases: <input type="text" id="total" /><p>
-    <!--  New Cases: <input type="text" id="ncase" /><p> -->
-    Total Deaths : <input type="text" id="tdeath" /><p>
-    Total Recovered : <input type="text" id="trecov" /><p></p>
-    <input type="button" onClick="allcasetotal()" Value="Calculate_" />
-     <input type="reset" Value="Reset" />
-    </form>
-    <p>The Result is of Active Case are: <br>
-    <span id = "result2" class="badge badge-danger"></span> &nbsp;&nbsp;&nbsp; / &nbsp;&nbsp;&nbsp;
-    <span id = "result3" class="badge badge-info" ></span> 
-    
-    </p>
+
+    <div class="container-Fluid">
+      <br>
+      <h1>Reported Total Cases New and Deaths</h1>
+      <div class="row">
+       
+        <div class="col-sm-4" style="background-color:#3093c7;">
+          <p>Total Cases: <input type="text" id="total" /><p>
+        
+            <input type="button" onClick="allcasetotal()" Value="Calculate Percentage" />
+            <input type="reset" Value="Reset" />
+          <p></p>
+        </div>
+  
+        <div class="col-sm-4" style="background-color:rgb(17, 64, 136);">
+          Total Deaths : <input type="text" id="tdeath" /><p>
+        </div>
+  
+        <div class="col-sm-4" style="background-color:rgb(17, 64, 136);">
+          Total Recovered : <input type="text" id="trecov" /><p></p>
+        </div>
+
+
+        <div class="col-sm-4" style="background-color:rgb(18, 196, 196);">
+          <p>The Result is of Active Case are: <br>
+            <span id = "result2" class="badge badge-danger"></span> &nbsp;&nbsp;&nbsp; / &nbsp;&nbsp;&nbsp;
+            <span id = "result3" class="badge badge-info" ></span> 
+            </p>
+        </div>
+      </div>
+    </div>
+
     -----------------------------------------------------<br>
-      <!-- 
-    <B>THE TOTAL PREMIUM IS </B><br>
     
-    <p>
-    <form>
-    TOTAL PREMIUM : <input type="text" id="fiveNumber" /><p>
-    Discount Premium: <input type="text" id="sixNumber" /><p>
-    <input type="button" onClick="totalPremium()" Value="TOTAL AMOUNT" />
-    </form>
-    <p>The Result is : <br>
-    <span id = "result2"></span>
-    </p>
-    -->
     </body>
     
     </html>
     
     
-    
-    
-    
-    <!--Discount : <input type="text" id="thirdNumber" /><br>
-    3nd Number: <input type="text" id="thirdNumber" /><br> -->
-    <!--<input type="reset" onClick="divideBy()" Value="Divide" /> 
-    
-    function alltotal()
-    {
-        var totalcase,newcase,tdeath,trecover,totalvalue;
-
-           totalcase = number(document.getElementById("total").value);
-           newcase = number(document.getElementById("ncase").value);
-           tdeath = number(document.getElementById("tdeath").value);
-            trecover = number(document.getElementById("trecov").value);
-            
-            totalvalue = totalcase + newcase - trecover;
-
-          document.getElementById("result3").value= totalvalue;
-           // (totalcase + newcase )- (trecover - tdeath);
-           //((totalcase -- tdeath -- trecover) ++ newcase)
-    }
-    
-    
-    -->
