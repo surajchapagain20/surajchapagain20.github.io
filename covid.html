@@ -82,12 +82,12 @@ border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;bo
             tdeath = document.getElementById("tdeath").value;
             trecover = document.getElementById("trecov").value;
 
-            document.getElementById("result2").innerHTML = ((tdeath / totalcase) * 100) + ' %';
-            document.getElementById("result3").innerHTML = ((totalcase ) - ((trecover)));
+            document.getElementById("result2").innerHTML = '% ' + ((tdeath / totalcase) * 100);
+           document.getElementById("result3").innerHTML = ((totalcase ) - ((trecover)));
+
         }
-
-
-            //  function alltotal()
+            
+                   //  function alltotal()
    // {
      //      totalcase = document.getElementById("total").value;
      //      newcase = document.getElementById("ncase").value;
@@ -112,21 +112,22 @@ border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;bo
                 <br>	<center>WEL-COME TO SURAJ CHAPAGAIN PAGE.</h3></div></center></strong>
                 <a href="index.html"><input type="submit" class="button_login" value="HOME" /></a>
                 <a href="covid.html"><input type="submit" class="button_login" value="COVID" /></a>
-                <a href="#"><input type="submit" class="button_login" value="COVID NEW" /></a>
+                <a href="corona.html"><input type="submit" class="button_login" value="COVID NEW" /></a>
     <br>
     
     <B>ACTIVE CASES</B>
+
     
     <p>
     <form>
     Mild Condition : <input type="text" id="midCase" /><p>
     Serious or Critical : <input type="text" id="serious" /><p>
     <input type="button" onClick="seriouscase()" Value="Critical" />
-    <input type="button" onClick="mildCase()" Value="Mild Condition" />
+    <input type="button" onClick="mildCase()" Value="Mild Condition"  />
     <input type="reset" Value="Reset" />
     </form>
     <p>The Result is : <br>
-    <span id = "result"></span>
+    <span id = "result" class="badge badge-success" ></span>
     </p>
     -----------------------------------------------------<br>
    
@@ -140,7 +141,7 @@ border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;bo
     <input type="reset" Value="Reset" />
     </form>
     <p>The Result is : <br>
-    <span id = "result1"></span>
+    <span id = "result1" class="badge badge-success" ></span>
     </p>
     -----------------------------------------------------<br>
 
@@ -155,8 +156,8 @@ border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;bo
      <input type="reset" Value="Reset" />
     </form>
     <p>The Result is of Active Case are: <br>
-    <span id = "result2"></span> &nbsp;&nbsp;&nbsp; / &nbsp;&nbsp;&nbsp;
-    <span id = "result3"></span> 
+    <span id = "result2" class="badge badge-danger"></span> &nbsp;&nbsp;&nbsp; / &nbsp;&nbsp;&nbsp;
+    <span id = "result3" class="badge badge-success" ></span> 
     
     </p>
     -----------------------------------------------------<br>
