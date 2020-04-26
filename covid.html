@@ -82,7 +82,7 @@ border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;bo
             tdeath = document.getElementById("tdeath").value;
             trecover = document.getElementById("trecov").value;
 
-            document.getElementById("result2").innerHTML = '% ' + ((tdeath / totalcase) * 100);
+           document.getElementById("result2").innerHTML =  ((tdeath / totalcase) * 100) + '% ' ;
            document.getElementById("result3").innerHTML = ((totalcase ) - ((trecover)));
 
         }
