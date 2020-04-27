@@ -57,11 +57,14 @@
        var userId=document.getElementById("userId").value;
        var userPassword=document.getElementById("userPassword").value;
 
-	 if(userId=="suraj@gmail.com","demo" && userPassword==("nepal","demo")){
-       //if(userId==("suraj@gmail.com","surajchapagain","suraj","demo") && userPassword==("nepal","demo")){
+       if(userId=="demo" && userPassword=="demo"){
            window.location.href="covid.html";
            //document.write("Login Successful");
-       }else{
+       }
+       if( userId=="surajchapagain" && userPassword==("nepal")){
+           window.location.href="covid.html";
+       }
+       else{
             document.getElementById("message").innerHTML="Login Failure.!!!";
        }
    }    
