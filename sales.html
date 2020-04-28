@@ -64,8 +64,12 @@ border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;bo
   }  
   </script>
 </head>
+TIME
 <body onload="timer()">
-    <p id="time">
+    <div>
+        <p id="time"></p>
+    </div>
+    
 
     <div><h3>
         <br>	<center>WEL-COME TO TRAVEL INVOICE PAGE</h3></div></center></strong>
@@ -88,12 +92,9 @@ Sales Amount: <input type="number" id="t1"><br>
 <script>
 
    function addNum(){
-      // praseInt is converting data to interger
-    var x=praseInt(document.getElementById("t1").value);
-     // var y=praseInt(document.getElementById("t2").value);
-        var z=x*1.3;
+         var x=praseInt(document.getElementById("t1").value);
+           var z=x*1.3;
         document.write(z);
     }
-
     </script>
    
