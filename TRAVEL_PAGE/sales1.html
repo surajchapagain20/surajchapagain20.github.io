@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	
+	<title>Invoice</title>
+	
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet">
+    <script src="timer.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	
+    <Style>
+    *{
+        font-family: 'Nova Flat', cursive;
+        font-size: large;
+    }   
+    </Style>  
+</head>
+
+<body>
+
+	<div><p></p> <p></p>
+        <center>
+        <div>INVOICE</div>
+        <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <hr size="50" noshade>
+    </center>
+        <p></p>
+		<br>
+		<div>		
+            Travelling Peace Nepal Pvt. Ltd.<br>
+			Kuimarigal-6, Kathmandu, Nepal<br>
+			Phone: (977) 5107099<br>
+		</div>
+        <p><p></p>
+            <table>
+                <p></p><p></p>
+                <tr>
+                    <td>Invoice #
+                        <hr size="50" noshade>
+                    </td>
+                   
+                    <td>000123
+                        <hr size="50" noshade>
+                    </td>
+                </tr>
+                <p></p><p></p>
+                <tr>
+                    <td>Date</td>
+                    <td><input type="date"> 
+                        <p></p> <p></p> <p></p> <p></p>
+                    </td>
+                </tr>
+            </table>
+		</div>
+		<table>
+		
+		  <tr>
+		      <th>Description</th>
+		      <th>Unit Cost</th>
+		      <th>Quantity</th>
+		      <th>Unit Total Amount:</th>
+		  </tr>
+		  
+		  <tr>
+		      <td><input type="text" placeholder="DESCRIPTION"></td>
+		      <td><input type="number" id="cost" placeholder="COST"></td>
+		      <td><input type="number" id="qty" placeholder="QTY"></td>
+              <td><span id = "Total_Amount" class="badge badge-info"></span><br>
+                                    
+                </td>
+          </tr>
+          
+          
+		  
+		  <tr>
+		      <td colspan="2"> </td>
+		  </tr>
+		  
+		  <tr>
+		      <td colspan="2"> </td>
+		      <td colspan="2">Amount Paid
+		      <input type="number" id="pAmount" placeholder="Paid Amount"></textarea></td>
+		  </tr>
+		  <tr>
+		      <td colspan="2"> </td>
+              <td colspan="2">Balance Due: <span id = "DueAmount" class="badge badge-info"></span><br></td>
+                
+              <td colspan="2">VAT AMOUNT: <span id = "TAX_AMT" class="badge badge-info"></span>  
+              </td>
+		  </tr>
+          <tr>
+            <td colspan="2"> <input type="button" onClick="Calculate()" Value="AMOUNT TO PAY" /> </td>
+            <hr size="50" noshade>
+          </tr>
+    </table>
+    <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <hr size="50" noshade>
+    <div>
+        This is Computer Generated Bill.
+    </div>
+    <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <hr size="50" noshade>
+	</div>
+        
+	<script>
+        function Calculate() {
+    var COST_AMT = parseInt(num1 = document.getElementById("cost").value); + "<br>";
+    var QTTY = parseInt(num1 = document.getElementById("qty").value); + "<br>";
+    var Paid_amt = parseInt(num1 = document.getElementById("pAmount").value); + "<br>";
+    
+    var PRICE = (COST_AMT * QTTY);
+    var dBalance =  PRICE - Paid_amt;
+    var tax =  PRICE * 13 / 100;
+  
+
+    document.getElementById("Total_Amount").innerHTML = 'Total Amount NPR: ' + (PRICE);
+    document.getElementById("DueAmount").innerHTML = 'Due Balance: ' + (dBalance + tax);
+    document.getElementById("TAX_AMT").innerHTML = 'VAT: ' + (tax);
+}
+    </script>
+
+</body>
+
+</html>

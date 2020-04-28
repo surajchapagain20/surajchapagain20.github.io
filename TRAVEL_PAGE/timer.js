@@ -19,7 +19,7 @@ function authenticate(){
 
  if(userId=="demo" && userPassword=="demo"){
       document.write("Login Successful");  
-      window.location.href="sales.html";
+      window.location.href="sales1.html";
      //document.write("Login Successful");
  }
  else{
