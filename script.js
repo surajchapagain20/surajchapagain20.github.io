@@ -5,7 +5,8 @@
        var userPassword=document.getElementById("userPassword").value;
 
        if(userId=="demo" && userPassword=="demo"){
-           window.location.href="covid.html";
+            document.write("Login Successful");  
+            window.location.href="covid.html";
            //document.write("Login Successful");
        }
        else{
