@@ -15,6 +15,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet">
     <script src="timer.js"></script>
+    <script src="bill.js"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 	
@@ -27,8 +28,8 @@
 </head>
 
 <body><p></p>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="logo.jpg" class="rotate" width="30" height="30" />
-	<div class="container-fluid"><p></p>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/rotate_logo.jpg" class="rotate" width="100" height="100" />
+	<div class="container-fluid">
         <center>
         <div>INVOICE</div>
         <div class="pull-right">      
@@ -43,8 +44,7 @@
 			Kuimarigal-6, Kathmandu, Nepal<br>
 			Phone: (977) 5107099<br>
 		</div>
-        <p><p></p>
-            <table>
+                    <table>
                 <p></p><p></p>
                 <tr>
                     <td>Invoice #
@@ -96,9 +96,14 @@
 		  </tr>
 		  <tr>
 		      <td colspan="2"> </td>
-              <td colspan="2">Balance Due: <span id = "DueAmount" class="badge badge-info"></span><br></td>
+              <td colspan="2">Balance Due: <span id = "DueAmount" class="badge badge-danger"></span><br></td>
                 
-              <td colspan="2">VAT AMOUNT: <span id = "TAX_AMT" class="badge badge-info"></span>  
+              <td colspan="2">VAT AMOUNT: <span id = "TAX_AMT" class="badge badge-success"></span>  
+              </td><br>
+              <td colspan="2"> </td>
+              <td class="pull-right">
+                Make all cheques payable to <br>
+            Travelling Peace Nepal Pvt. Ltd. 
               </td>
 		  </tr>
           <tr>
@@ -106,30 +111,33 @@
             <hr size="50" noshade>
           </tr>
     </table>
+
     <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <hr size="50" noshade>
+    <div>
+OTHER COMMENTS,<br>
+1. TOTAL PAYMENT DUE IN 30 DAYS<br>
+2. PLEASE INCLUDE THE INVOICE NUMBER ON YOUR CHECK<br>
+
+    </div>
+    <div>
+<center>
+    
+If you jave any question about this invoice, <br>
+please contact the <br>
+Travelling Peace Nepal Pvt. Ltd.<br>
+Kuimarigal-6, Kathmandu, Nepal<br>
+Phone: (977) 5107099<br>
+
+THANK YOU FOR YOUR BUSINESS!.<br>
+BE WHEWRE YOU WANT TO BE.!!!
+</center>
+
+    </div>
     <div>
         This is Computer Generated Bill.
     </div>
     <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <hr size="50" noshade>
 	</div>
-        
-	<script>
-        function Calculate() {
-    var COST_AMT = parseInt(num1 = document.getElementById("cost").value); + "<br>";
-    var QTTY = parseInt(num1 = document.getElementById("qty").value); + "<br>";
-    var Paid_amt = parseInt(num1 = document.getElementById("pAmount").value); + "<br>";
-    
-    var PRICE = (COST_AMT * QTTY);
-    var dBalance =  PRICE - Paid_amt;
-    var tax =  PRICE * 13 / 100;
-  
-
-    document.getElementById("Total_Amount").innerHTML = 'Total Amount NPR: ' + (PRICE);
-    document.getElementById("DueAmount").innerHTML = 'Due Balance: ' + (dBalance + tax);
-    document.getElementById("TAX_AMT").innerHTML = 'VAT: ' + (tax);
-}
-    </script>
-
 </body>
 
 </html>
