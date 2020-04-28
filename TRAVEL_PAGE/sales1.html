@@ -16,9 +16,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet">
     <script src="timer.js"></script>
     <script src="bill.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-	
+    <link rel="stylesheet"  type="text/css" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  type="text/css" rel="stylesheet"/>
+    
+    <!-- PRINT KEY --> 
+    
+
+    <!-- PRINT KEY-->
+
     <Style>
     *{
         font-family: 'Nova Flat', cursive;
@@ -27,8 +32,15 @@
     </Style>  
 </head>
 
-<body><p></p>
+<body  onload="timer()">
+
+    <p></p>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/rotate_logo.jpg" class="rotate" width="100" height="100" />
+  
+        <div>
+            <p id="time"></p>
+        </div>
+
 	<div class="container-fluid">
         <center>
         <div>INVOICE</div>
@@ -75,7 +87,7 @@
 		  </tr>
 		  
 		  <tr>
-		      <td><input type="text" placeholder="DESCRIPTION"></td>
+		      <td><input type="text" size="50" placeholder="DESCRIPTION"></td>
 		      <td><input type="number" id="cost" placeholder="COST"></td>
 		      <td><input type="number" id="qty" placeholder="QTY"></td>
               <td><span id = "Total_Amount" class="badge badge-info"></span><br>
@@ -101,11 +113,12 @@
               <td colspan="2">VAT AMOUNT: <span id = "TAX_AMT" class="badge badge-success"></span>  
               </td><br>
               <td colspan="2"> </td>
-              <td class="pull-right">
-                Make all cheques payable to <br>
-            Travelling Peace Nepal Pvt. Ltd. 
-              </td>
-		  </tr>
+              
+          </tr>
+          <th class="pull-right">
+            Make all cheques payable to <br>
+        Travelling Peace Nepal Pvt. Ltd. 
+          </th>
           <tr>
             <td colspan="2"> <input type="button" onClick="Calculate()" Value="AMOUNT TO PAY" /> </td>
             <hr size="50" noshade>
@@ -127,12 +140,12 @@ please contact the <br>
 Travelling Peace Nepal Pvt. Ltd.<br>
 Kuimarigal-6, Kathmandu, Nepal<br>
 Phone: (977) 5107099<br>
-
-THANK YOU FOR YOUR BUSINESS!.<br>
-BE WHEWRE YOU WANT TO BE.!!!
 </center>
-
-    </div>
+<div class="pull-right">
+THANK YOU FOR YOUR BUSINESS!.<br>
+BE WHEWRE YOU WANT TO BE.!!!<p></p>></div>
+</div>
+    <p></p>
     <div>
         This is Computer Generated Bill.
     </div>
