@@ -13,12 +13,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 	
     <Style>
     *{
-      font-family: 'Nova Flat', cursive;
-
+        font-family: 'Nova Flat', cursive;
+        font-size: large;
     }   
     </Style>  
     
@@ -34,7 +35,7 @@
         <B>Login to Page.!!!</B><p></p>
         Enter Email Address: <input type="text" id="userId" placeholder="Enter User Id"><p></p>
         Enter Your Password: <input type="password" id="userPassword" placeholder="Enter Login Password"><p></p>
-        <p id="message" class="badge badge-danger"></p><p></p>
+        <p id="message" class="badge badge-danger" style="font-family: 'Diplomata SC', cursive;"></p><p></p>
         <button onclick="authenticate()">Login Here</button>
         </center> 
     </div>
@@ -50,36 +51,6 @@
 </div>
     
 
-
-</body>
-</html>
-
-
-
-<script>
-  
-       function authenticate(){
-        'use strict';
-       var userId=document.getElementById("userId").value;
-       var userPassword=document.getElementById("userPassword").value;
-
-       if(userId=="demo" && userPassword=="demo"){
-           window.location.href="covid.html";
-           //document.write("Login Successful");
-       }
-       else{
-            document.getElementById("message").innerHTML="Login Failure.!!!";
-       }
-       
-      // if( userId=="surajchapagain" && userPassword==("nepal")){
-        //   window.location.href="covid.html";
-      // }
-     //  else{
-        //    document.getElementById("message").innerHTML="Login Failure.!!!";
-     //  }
-   }    
-
-</script>
 
 </body>
 </html>
