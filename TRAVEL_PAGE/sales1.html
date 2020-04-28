@@ -28,13 +28,16 @@
 
 <body>
 
-	<div><p></p> <p></p>
+	<div class="container-fluid"><p></p> <p></p>
         <center>
         <div>INVOICE</div>
+        <div class="pull-right">      
+            
+            <p class="fa fa-print" aria-hidden="true"><input type="button" value="Print" onclick="window.print()" /> 
+            </p>
+          </div><br>
         <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <hr size="50" noshade>
     </center>
-        <p></p>
-		<br>
 		<div>		
             Travelling Peace Nepal Pvt. Ltd.<br>
 			Kuimarigal-6, Kathmandu, Nepal<br>
@@ -45,14 +48,15 @@
                 <p></p><p></p>
                 <tr>
                     <td>Invoice #
+                      
                         <hr size="50" noshade>
                     </td>
                    
-                    <td>000123
+                    <hr size="50" noshade>
+                    <td><input type="number" placeholder="INVOICE NO:">
                         <hr size="50" noshade>
                     </td>
                 </tr>
-                <p></p><p></p>
                 <tr>
                     <td>Date</td>
                     <td><input type="date"> 
