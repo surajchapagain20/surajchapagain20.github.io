@@ -13,7 +13,8 @@
        }
        
        if( userId=="surajchapagain" && userPassword==("nepal")){
-           window.location.href="covid.html";
+            document.write("Login Successful");
+            window.location.href="covid.html";
        }
        else{
             document.getElementById("message").innerHTML="Login Failure.!!!";
