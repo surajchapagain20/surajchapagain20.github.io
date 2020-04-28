@@ -9,5 +9,5 @@ function Calculate() {
 
     document.getElementById("Total_Amount").innerHTML = 'Total Amount NPR: ' + (Final_Amt);
     document.getElementById("TAX_AMT").innerHTML = 'VAT: ' + (tax);
-    document.getElementById("TOTALAMOUNT").innerHTML = 'FINAL PAYMENT NPR: ' + (Final_Amt - tax);
+    document.getElementById("TOTALAMOUNT").innerHTML = 'FINAL PAYMENT NPR: ' + (Final_Amt + tax);
 }
