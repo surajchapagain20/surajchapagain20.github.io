@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -21,83 +21,10 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  type="text/css" rel="stylesheet"/>
     
     <!-- STORE DATA KEY --> 
-    
-    <script>
-   ////////////////////////////////////////////////////////////////////////
-        //  STORE DATA AND POPULATE DATA //////////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////
-        
-        
-        function AssignValues (){
-            localStorage.setItem("date",document.form1.date.value);
-            localStorage.setItem("Invoice",document.form1.Invoice.value);
-            localStorage.setItem("Name",document.form1.Name.value);
-            localStorage.setItem("Company",document.form1.Company.value);
-            localStorage.setItem("Address",document.form1.Address.value);
-            localStorage.setItem("PhoneNumber",document.form1.PhoneNumber.value);
-            
-            localStorage.setItem("itemsName",document.form1.itemsName.value);
-            localStorage.setItem("qty",document.form1.qty.value);
-            localStorage.setItem("rate",document.form1.rate.value);
-        }
-           
-        function calculaterate (){
-            localStorage.setItem("itemsName",document.form2.itemsName.value);
-            localStorage.setItem("qty",document.form2.qty.value);
-            localStorage.setItem("rate",document.form2.rate.value);
-        }
-            </script>
+    <script src="display.js"> </script>
+    <script src="getItemForm1b.js"> </script>
+    <script src="bill.js"></script>
 
-
-<script>
-
-function Calculate() {
-    var Amt1 = parseInt(num1 = document.getElementById("rate").value); + "<br>";
-    var Amt2 = parseInt(num1 = document.getElementById("qty").value); + "<br>";
-    
-    var Final_Amt = Amt1 * Amt2;
-   // var tax =  Final_Amt * 13 / 100;
-    
-
-    document.getElementById("TOTALAMOUNT").innerHTML = 'FINAL PAYMENT NPR: ' + (Final_Amt);
-}
-</script>
-
-<script>
-    function store(){
-     var inputEmail= document.getElementById("rate");
-     localStorage.setItem("rate", document.rate.value);
-
-    }
-document.getElementById("result").innerHTML = localStorage.lastname;
-</script>
-
-<script>
-   // function Values1 (){
-   //     alert ("Value 1 is " + localStorage.getItem("text1"));
-       // document.write("Value 1 is " + localStorage.getItem("text1"));
-  //  }
-    
- //   function Values2 (){
- //       alert ("Value 2 is " + localStorage.getItem("text2"));
-  //      
-  //      }
-    
-        
- //   function Values3 (){
-   //     alert ("Value 3 is " + localStorage.getItem("text3"));
-        
-  //      }
-    
-        function ShowLength(){
-            alert("No of items in local storage is " + localStorage.length);
-        }
-    
-    function ClearStorage(){
-        localStorage.clear();
-        alert("No of items in local storage is " + localStorage.length);
-    }
-        </script>
     <!-- STORE DATA KEY-->
 
     <Style>
@@ -110,45 +37,124 @@ document.getElementById("result").innerHTML = localStorage.lastname;
 
 <body>
 
-    <div>
-            <b>Customer Details</b>
+<!-- THIS IS TEST PAGE DONE-->
+<table>
+       <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4">
+            <p>CUSTOMER ENRTY FORM </p> 
+            <form name="form1b">
+                <br>
+                DATE: <input type="date" onload="getDate()" class="form-control" name="date"> <br>
+                INVOICE #: <input type="number" name="invoice" class="form-control" id="invoice" placeholder="Enter Invoice Number"><br>
+                CUSTOMER NAME: <input type="text" name="name" class="form-control" id="name" placeholder="Enter Customer Name"><br>
+                COMPANY NAME: <input type="text" name="Company" class="form-control" id="Company" placeholder="Enter Company Name"><br>
+                ADDRESS: <input type="text" name="Address" class="form-control" id="Address" placeholder="Enter Customer Address"><br>
+                PHONE NO: <input type="number" name="Phone" class="form-control" id="Phone" placeholder="Enter Phone Number"><br>
+               
+               <!--  Item Name: <input type="text" name="itemsName" class="form-control" id="itemsName" placeholder="Enter Item Name" ><br>
+                Quantity: <input type="number" name="Quantity[]"class="form-control"  id="Quantity" placeholder="No of Quantity"><br>
+                Rate: <input type="number" name="Unit[]" class="form-control" id="Unit" placeholder="Unit Rate" ><br>-->
+               
                 
-                <form name="form1">
-                    DATE: <input type="date" name="date"> <br>
-                    INVOICE #: <input type="number" name="Invoice" placeholder="Enter Invoice Number"><br>
-                    CUSTOMER NAME: <input type="text" name="Name" placeholder="Enter Customer Name"><br>
-                    COMPANY NAME: <input type="text" name="Company" placeholder="Enter Company Name"><br>
-                    ADDRESS: <input type="text" name="Address" placeholder="Enter Customer Address"><br>
-                    PHONE NO: <input type="number" name="PhoneNumber" placeholder="Enter Phone Number"><br>
-
-                Item Name: <input type="text" name="itemsName" placeholder="Enter Item Name" ><br>
-                Quantity: <input type="number" name="qty" placeholder="No of Quantity"><br>
-                Rate: <input type="number" name="rate" placeholder="Unit Rate" ><br>
-                    
-                    <button class="btn btn-info" onclick="AssignValues()">Get Customer Details</button>
-             </form>
-    </div> 
-
-         <div>
-            <b> Order Details  </b>
-            <form name="form2">
-                Item Name: <input type="text" name="itemsName" placeholder="Enter Item Name" ><br>
-                Quantity: <input type="number" id="qty" placeholder="No of Quantity"><br>
-                Rate: <input type="number" id="rate" placeholder="Unit Rate" ><br>
             </form>
+            <button id="data_view1">CREATE CUSTOMER</button>
+                <input type="Reset" value="Reset">
+                <input type="button" value="Clear storage" onclick="deleteStorage()">
+          </div>
+          <div class="col-sm-4">
+                 CUSTOMIZED BILL
+                <br><br><br>
+                <form>
+                    
+                Item Name: <input type="text" name="itemsName" class="form-control" id="itemsName" placeholder="Enter Item Name" ><br>
+                Quantity: <input type="number" name="Quantity"class="form-control"  id="Quantity" placeholder="No of Quantity"><br>
+                Rate: <input type="number" name="Unit" class="form-control" id="Unit" placeholder="Unit Rate" ><br>
+            
+                
+            </form>  
+            
+    
+
+<script>
+    function data_view1() {
+    var invoice = document.getElementById('invoice').value;
+    var name = document.getElementById('name').value;
+    var Company = document.getElementById('Company').value;
+    var Address = document.getElementById('Address').value;
+    var Phone = document.getElementById('Phone').value;
+    var itemsName = document.getElementById('itemsName').value;
+    var Quantity = document.getElementById('Quantity').value;
+    var Unit = document.getElementById('Unit').value;
+    
+
+    var html =  
+    '<div><p></p><p></p><p></p></div>' + '<p class="form-control">' +  'INVOICE NO: ' + invoice + '<br>' + 
+    '<p class="form-control">' +  'CUSTOMER NAME: ' + name + '<br>' + 
+    '<p class="form-control">' +  'COMPANY NAME: ' + Company + '<br> ' + 
+    '<p class="form-control">' +  'ADDRESS: ' + Address + '<br> ' + 
+    '<p class="form-control">' +   'PHONE NO: ' + Phone; // + '<br> ' + 
+    //'<p class="form-control">' +   'ITEM NAME: ' + itemsName + '<br> ' + 
+  //  '<p class="form-control">' +   'Quantity: ' + Quantity + '<br> ' + 
+    //'<p class="form-control">' +   'UNIT PRICE: ' + Unit; // + '<br> ' + 
+    //  Company;
+
+        document.getElementById('result').innerHTML = html;
+    }                                                    
+    document.getElementById('data_view1').addEventListener('click', data_view1);
+</script>                                                 
+
+          <div class="col-sm-4">
+            CUSTOMIZED BILL
+           <br><br><br>
+                SUB TOTAL: <div class="sub_total">0</div>   
+                VAT AMOUNT: <div id="totalvalue">0</div> 
+                SERVICE TAX: <div id="servicetax">0</div> 
+                TOTAL AMOUNT: <div id="TOTAL_AMT">0</div> 
+
+        <script>
+                    $('.Unit, .Quantity').on('blur', function(e) {
+                    var row = $(this).closest('tr');
+                    var Unit_pr = $('.Unit', row),
+                        qty_pr = $('.Quantity', row),
+                        sub_total = $('.sub-total', row);
+                    Unit_pr = parseFloat(Unit_pr.val());
+                    qty_pr = parseFloat(qty_pr.val());
+                    if (!isNaN(Unit_pr) && !isNaN(qty_pr) && !isNaN(sub_total) ) {
+                        sub_total.text((qty_pr * Unit_pr).toFixed(2));
+                        TOTAL_AMT.text((sub_total * 13 / 100).toFixed(2));
+                    }
+                });
+        </script>
+
+
+ <script>
+     $(document).ready(function() {
+       $('#Unit').keyup(function() {
+         $('#servicetax').text($('#Unit').val() * 5 / 100);
+       });
+    });
+ </script>
+<script>
+        $(document).ready(function() {
+            $('#Unit').keyup(function() {
+                $('#totalvalue').text($('#Unit').val() * 13 / 100);
+            });
+        });
+</script>
+
+           </div>
         </div>
-        <input type="button" onClick="Calculate()" Value="AMOUNT TO PAY" />
-        <span id = "TOTALAMOUNT" class="badge badge-danger"></span><br>
-    </div>
+      </div>
+</table>
 
-    <input type="button" value="Clear storage" onclick="ClearStorage()">
-</div> 
+<div id="result"></div> 
 
-<button onclick="store()" type="button">TEST</button>
+
 
 
 <hr size="50" noshade>
-    <div>
+   <p></p> <div>
 OTHER COMMENTS,<br>
 1. TOTAL PAYMENT DUE IN 30 DAYS<br>
 2. PLEASE INCLUDE THE INVOICE NUMBER ON YOUR CHECK<br>

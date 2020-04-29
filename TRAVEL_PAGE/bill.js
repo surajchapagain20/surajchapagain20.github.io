@@ -12,5 +12,5 @@ function Calculate() {
     document.getElementById("Total_Amount").innerHTML = 'Total Amount NPR: ' + (PRICE);
     document.getElementById("DueAmount").innerHTML = 'Due Balance: ' + (dBalance + tax);
     document.getElementById("TAX_AMT").innerHTML = 'VAT: ' + (tax);
-    document.getElementById("TAMT").innerHTML = 'TOTAL AMOUNT TO PAY: ' + (dBalance+tax);
+    document.getElementById("TAMT").innerHTML = 'TOTAL AMOUNT TO PAY: ' + (dBalance + tax);
 }

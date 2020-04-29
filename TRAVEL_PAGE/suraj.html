@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.mobile-1.2.0.min.js"></script>
+<script src="js/login.js"></script>
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <body>
+        <table>
+          <tbody><tr>
+            <th>Sl No</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Discount %</th>
+            <th>Total Price</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><input class="expensess qty"></td>
+            <td><input class="expensess price"></td>
+            <td><input class="expensess discount"></td>
+            <td><input class="expensess_sum" disabled=""></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><input class="expensess qty"></td>
+            <td><input class="expensess price"></td>
+            <td><input class="expensess discount"></td>
+            <td><input class="expensess_sum" disabled=""></td>
+          </tr>
+          </tbody></table>
+      
+      Grand Total = <input id="grand_total" disabled="">
+        
+      </body>
+</html>
+<script>
+    $('input.qty,input.price,input.discount').on('change keyup',function(){
+  var $tr = $(this).closest('tr'),
+      $qty = $tr.find('input.qty')      ,
+      $price= $tr.find('input.price'),
+      $discount= $tr.find('input.discount'),
+      $total= $tr.find('input.expensess_sum'),
+      $grand_total=$('#grand_total');
+      
+      $total.val($qty.val()*($price.val()-($price.val()*($discount.val()/100))));
+      
+      var grandTotal=0;
+      $('table').find('input.expensess_sum').each(function(){
+          if(!isNaN($(this).val()))
+            {grandTotal += parseInt($(this).val()); 
+            }
+      });
+      if(isNaN(grandTotal))
+         grandTotal =0;
+      $grand_total.val(grandTotal)
+})
+</script>
+
