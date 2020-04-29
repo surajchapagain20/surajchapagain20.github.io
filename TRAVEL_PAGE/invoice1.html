@@ -98,20 +98,7 @@
 </script>                                                 
 
           <div class="col-sm-8">
-    <script>
-        $('.Unit, .Quantity').on('blur', function(e) {
-            var row = $(this).closest('tr');
-            var Unit_pr = $('.Unit', row),
-                qty_pr = $('.Quantity', row),
-                sub_total = $('.sub-total', row);
-            Unit_pr = parseFloat(Unit_pr.val());
-            qty_pr = parseFloat(qty_pr.val());
-            if (!isNaN(Unit_pr) && !isNaN(qty_pr)) {
-                sub_total.text((qty_pr * Unit_pr).toFixed(2));
-            }
-        });
-
-    </script>
+    
 
            </div>
         </div>
