@@ -7,9 +7,10 @@ function Calculate() {
     var PRICE = (COST_AMT * QTTY);
     var dBalance =  PRICE - Paid_amt;
     var tax =  PRICE * 13 / 100;
+    var t_amt = PRICE - dBalance + tax;
   
-
     document.getElementById("Total_Amount").innerHTML = 'Total Amount NPR: ' + (PRICE);
     document.getElementById("DueAmount").innerHTML = 'Due Balance: ' + (dBalance + tax);
     document.getElementById("TAX_AMT").innerHTML = 'VAT: ' + (tax);
+    document.getElementById("TAMT").innerHTML = 'TOTAL AMOUNT TO PAY: ' + (tax);
 }
