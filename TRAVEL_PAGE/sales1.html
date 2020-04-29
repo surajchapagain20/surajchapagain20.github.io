@@ -83,14 +83,14 @@
 		      <th>Description</th>
 		      <th>Unit Cost</th>
 		      <th>Quantity</th>
-		      <th>Unit Total Amount:</th>
+		      
 		  </tr>
 		  
 		  <tr>
 		      <td><input type="text" size="30" placeholder="DESCRIPTION"></td>
 		      <td><input type="number" id="cost" placeholder="COST"></td>
 		      <td><input type="number" id="qty" placeholder="QTY"></td>
-              <td><span id = "Total_Amount" class="badge badge-warning"></span><br>
+              
                                     
                 </td>
           </tr>
@@ -100,20 +100,25 @@
 		  </tr>
 		  
 		  <tr>
-		      <td colspan="2"> </td>
+            <th>Unit Total Amount:
+            <span id = "Total_Amount" class="badge badge-warning"></span><br></th>
 		      <td colspan="2">Amount Paid
 		      <input type="number" id="pAmount" placeholder="Paid Amount"></textarea></td>
-		  </tr>
-		  <tr>
+              </tr>
+            <td colspan="2"><span id = "TAMT" class="text-light bg-dark"></span><br></td>
+            <td colspan="2"> <span id = "TAX_AMT" class="badge badge-success"></span>  
+            </td><br>
+            <tr>
 		      <td colspan="2"> </td>
-              <td colspan="2">Total Amount: <span id = "TAMT" class="badge badge-success"></span><br></td>
+              
                 
-              <td colspan="2">VAT AMOUNT: <span id = "TAX_AMT" class="badge badge-success"></span>  
-              </td><br>
+              
               <td colspan="2"> </td>
               
           </tr>
+          <tr></tr><p></p>
           <th class="pull-right">
+            <p></p>
             Make all cheques payable to <br>
         Travelling Peace Nepal Pvt. Ltd. 
           </th>
