@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	
+	<title>Store Data</title>
+	
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet">
+    <script src="storedata.js"></script>
+    <link rel="stylesheet"  type="text/css" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  type="text/css" rel="stylesheet"/>
+    
+
+    <Style>
+    *{
+        font-family: 'Nova Flat', cursive;
+        font-size: large;
+    }   
+    </Style>  
+
+    <script>
+
+        
+////////////////////////////////////////////////////////////////////////
+//  STORE DATA AND POPULATE DATA //////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+
+function AssignValues (){
+    localStorage.setItem("text1",document.form1.text1.value);
+    localStorage.setItem("text2",document.form1.text2.value);
+    localStorage.setItem("text3",document.form1.text3.value);
+}
+
+function Values1 (){
+    alert ("Value 1 is " + localStorage.getItem("text1"));
+
+}
+
+function Values2 (){
+    alert ("Value 2 is " + localStorage.getItem("text2"));
+    
+    }
+
+    
+function Values3 (){
+    alert ("Value 3 is " + localStorage.getItem("text3"));
+    
+    }
+
+    function ShowLength(){
+        alert("No of items in local storage is " + localStorage.length);
+    }
+
+function ClearStorage(){
+    localStorage.clear();
+    alert("No of items in local storage is " + localStorage.length);
+}
+    </script>
+
+</head>
+<p></p>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/rotate_logo.jpg" width="100" height="100" />
+  
+        <div>
+           <p id="time"></p>
+        </div>
+<body  onload="timer()">
+
+    
+
+        <form name="form1">
+            <input type="text" name="text1" placeholder="Enter text ...">
+            <br>
+            <input type="text" name="text2" placeholder="Enter text ...">
+            <br>
+            <input type="text" name="text3" placeholder="Enter text ...">
+            <br>
+            <input type="button" value="Assign values" onclick="AssignValues()">
+          
+
+        </form>
+
+
+
+</body>
+
+</html>
