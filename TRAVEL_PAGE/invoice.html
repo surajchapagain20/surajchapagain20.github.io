@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	
+	<title>Invoice</title>
+	
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet"  type="text/css" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  type="text/css" rel="stylesheet"/>
+    
+    <!-- STORE DATA KEY --> 
+    
+    <script>
+
+        
+        ////////////////////////////////////////////////////////////////////////
+        //  STORE DATA AND POPULATE DATA //////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////
+        
+        
+        function AssignValues (){
+            localStorage.setItem("text1",document.form1.text1.value);
+            localStorage.setItem("text2",document.form1.text2.value);
+            localStorage.setItem("text3",document.form1.text3.value);
+        }
+        
+        function Values1 (){
+            alert ("Value 1 is " + localStorage.getItem("text1"));
+        
+        }
+        
+        function Values2 (){
+            alert ("Value 2 is " + localStorage.getItem("text2"));
+            
+            }
+        
+            
+        function Values3 (){
+            alert ("Value 3 is " + localStorage.getItem("text3"));
+            
+            }
+        
+            function ShowLength(){
+                alert("No of items in local storage is " + localStorage.length);
+            }
+        
+        function ClearStorage(){
+            localStorage.clear();
+            alert("No of items in local storage is " + localStorage.length);
+        }
+            </script>
+    <!-- STORE DATA KEY-->
+
+    <Style>
+    *{
+        font-family: 'Nova Flat', cursive;
+        font-size: large;
+    }   
+    </Style>  
+</head>
+
+<body  onload="timer()">
+
+    <p></p>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/rotate_logo.jpg" width="100" height="100" />
+  
+        <div>
+           <p id="time"></p>
+        </div>
+
+	<div class="container-fluid">
+        <center>
+        <div>INVOICE</div>
+        <div class="pull-right">      
+            
+            <!-- <p class="fa fa-print" aria-hidden="true"><input type="button" value="Print" onclick="window.print()" /> -->
+                <a href="javascript:window.print()" class="fa fa-print" aria-hidden="true" >PRINT</a>
+            </p>
+          </div><br>
+        <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <hr size="50" noshade>
+    </center>
+		<div>		
+            Travelling Peace Nepal Pvt. Ltd.<br>
+			Kuimarigal-6, Kathmandu, Nepal<br>
+			Phone: (977) 5107099<br>
+		</div>
+                    <table>
+                <p></p><p></p>
+                <tr>
+                    <td>Invoice #
+                      
+                        <hr size="50" noshade>
+                    </td>
+                   
+                    <hr size="50" noshade>
+                    <td><input type="number" placeholder="INVOICE NO:">
+                        <hr size="50" noshade>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td><input type="date"> 
+                        <p></p> <p></p> <p></p> <p></p>
+                    </td>
+                </tr>
+            </table>
+		</div>
+		<table>
+		
+		  <tr>
+		      <th>Description</th>
+		      <th>Unit Cost</th>
+		      <th>Quantity</th>
+		      
+		  </tr>
+		  
+		  <tr>
+            <form name="form1">
+		      <td><input type="text" name="text1" placeholder="DESCRIPTION"></td>
+		      <td><input type="number" name="text2" placeholder="COST"></td>
+		      <td><input type="number" name="text3" placeholder="QTY"></td>
+              
+              <input type="button" value="Assign values" onclick="AssignValues()">
+              </form>
+              
+                </td>
+          </tr>
+		      </table>
+
+    <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <hr size="50" noshade>
+    <div>
+OTHER COMMENTS,<br>
+1. TOTAL PAYMENT DUE IN 30 DAYS<br>
+2. PLEASE INCLUDE THE INVOICE NUMBER ON YOUR CHECK<br>
+
+    </div>
+    <div>
+<center>
+    
+If you jave any question about this invoice, <br>
+please contact the <br>
+Travelling Peace Nepal Pvt. Ltd.<br>
+Kuimarigal-6, Kathmandu, Nepal<br>
+Phone: (977) 5107099<br>
+</center>
+<div class="pull-right">
+THANK YOU FOR YOUR BUSINESS!.<br>
+BE WHERE YOU WANT TO BE.!!!<p></p></div>
+</div>
+    <p></p>
+    <div>
+        This is Computer Generated Bill.
+    </div>
+    <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <p></p> <hr size="50" noshade>
+	</div>
+</body>
+
+</html>
