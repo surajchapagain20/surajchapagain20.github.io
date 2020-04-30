@@ -52,10 +52,10 @@
                 COMPANY NAME: <input type="text" name="Company" class="form-control" id="Company" placeholder="Enter Company Name"><br>
                 ADDRESS: <input type="text" name="Address" class="form-control" id="Address" placeholder="Enter Customer Address"><br>
                 PHONE NO: <input type="number" name="Phone" class="form-control" id="Phone" placeholder="Enter Phone Number"><br>
-                Item Name: <input type="text" name="itemsName" class="form-control" id="itemsName" placeholder="Enter Item Name" ><br>
+                <!--Item Name: <input type="text" name="itemsName" class="form-control" id="itemsName" placeholder="Enter Item Name" ><br>
                 Quantity: <input type="number" name="Quantity"class="form-control"  id="Quantity" placeholder="No of Quantity"><br>
                 Rate: <input type="number" name="Unit" class="form-control" id="Unit" placeholder="Unit Rate" ><br>
-               <!--  Item Name: <input type="text" name="itemsName" class="form-control" id="itemsName" placeholder="Enter Item Name" ><br>
+                 Item Name: <input type="text" name="itemsName" class="form-control" id="itemsName" placeholder="Enter Item Name" ><br>
                 Quantity: <input type="number" name="Quantity[]"class="form-control"  id="Quantity" placeholder="No of Quantity"><br>
                 Rate: <input type="number" name="Unit[]" class="form-control" id="Unit" placeholder="Unit Rate" ><br>-->
                
@@ -77,9 +77,9 @@
     var Company = document.getElementById('Company').value;
     var Address = document.getElementById('Address').value;
     var Phone = document.getElementById('Phone').value;
-    var itemsName = document.getElementById('itemsName').value;
-    var Quantity = document.getElementById('Quantity').value;
-    var Unit = document.getElementById('Unit').value;
+   // var itemsName = document.getElementById('itemsName').value;
+   // var Quantity = document.getElementById('Quantity').value;
+   // var Unit = document.getElementById('Unit').value;
     var date= document.getElementById('date').value;
 
     var html =  
@@ -88,10 +88,10 @@
     '<p class="form-control">' +  'CUSTOMER NAME: ' + name + '<br>' + 
     '<p class="form-control">' +  'COMPANY NAME: ' + Company + '<br> ' + 
     '<p class="form-control">' +  'ADDRESS: ' + Address + '<br> ' + 
-    '<p class="form-control">' +   'PHONE NO: ' + Phone  + '<br> ' + 
-    '<p class="form-control">' +   'ITEM NAME: ' + itemsName + '<br> ' + 
-    '<p class="form-control">' +   'Quantity: ' + Quantity + '<br> ' + 
-    '<p class="form-control">' +   'UNIT PRICE: ' + Unit; // + '<br> ' + 
+    '<p class="form-control">' +   'PHONE NO: ' + Phone; //  + '<br> ' + 
+    //'<p class="form-control">' +   'ITEM NAME: ' + itemsName + '<br> ' + 
+    //'<p class="form-control">' +   'Quantity: ' + Quantity + '<br> ' + 
+    //'<p class="form-control">' +   'UNIT PRICE: ' + Unit; // + '<br> ' + 
     //'<p class="form-control">' +   'DATE: ' + date;
 
         document.getElementById('result').innerHTML = html;
