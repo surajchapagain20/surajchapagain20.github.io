@@ -1,0 +1,274 @@
+
+<html>
+
+    <head>
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<TITLE>||| JEEVAN SAHARA |||</TITLE>
+<link rel="shortcut icon" href="favicon.ico"></link>
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet">
+
+	
+    <Style>
+    *{
+      font-family: 'Nova Flat', cursive;
+
+    }   
+	</Style>  
+
+
+<style>
+.button_login{
+border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; text-align: center; color: #FFFFFF; background-color: #3093c7;
+ background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3093c7), color-stop(100%, #1c5a85));
+ background-image: -webkit-linear-gradient(top, #3093c7, #1c5a85);
+ background-image: -moz-linear-gradient(top, #3093c7, #1c5a85);
+ background-image: -ms-linear-gradient(top, #3093c7, #1c5a85);
+ background-image: -o-linear-gradient(top, #3093c7, #1c5a85);
+ background-image: linear-gradient(top, #3093c7, #1c5a85);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#3093c7, endColorstr=#1c5a85);
+}
+
+.button_login:hover{
+ border:1px solid #1c5675; background-color: #26759e;
+ background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#26759e), color-stop(100%, #133d5b));
+ background-image: -webkit-linear-gradient(top, #26759e, #133d5b);
+ background-image: -moz-linear-gradient(top, #26759e, #133d5b);
+ background-image: -ms-linear-gradient(top, #26759e, #133d5b);
+ background-image: -o-linear-gradient(top, #26759e, #133d5b);
+ background-image: linear-gradient(top, #26759e, #133d5b);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#26759e, endColorstr=#133d5b);
+}</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#Table11 {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 14px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#Table11 {
+  border-collapse: collapse;
+  width: 50%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#Table11 th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#Table11 tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#Table11 tr.header, #Table11 tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+
+
+         <script language="javascript">
+       
+	function CALC_ALL_RATE() {
+    Amt1 = document.getElementById("premiumRate").value; + "<br>";
+    Amt2 = document.getElementById("SumAssured").value; + "<br>";
+	Amt3 = document.getElementById("discountamt").value; + "<br>";
+	
+    
+    var premiumAmt = Amt1 * Amt2 / 1000;
+	var disc =  premiumAmt * Amt3 / 100;
+    var totalamt = premiumAmt - disc;
+
+    document.getElementById("TOTAL").innerHTML = '<br><style=”font-family: ‘Opens Sans’ sans-serif; font-size: 30px;>'+'FINAL PAYMENT NPR: ' + (totalamt)+ '<p></p>';
+		}
+</script>
+    
+    
+    </head>
+    
+    <style type="text/css">
+    body {margin: 30px;}
+    </style> 
+    </head>
+    <body>
+  
+  <center>
+   <a href="index.html"><input type="submit" class="button_login" value="HOME" /></a>
+  </center>
+                
+        <div class="container-fluid">
+            <center>
+              <B>Nepallife Premium Calculator</B>
+            </center>
+<!--  -->
+<h2>Select the Product that you want.</h2>
+
+<input type="text" id="SELECT_PLAN" onKeyUp="select_plan()" placeholder="TYPE PLAN NAME TO VIEW.." title="TYPE PLAN NAME TO SELECT">
+
+<button class="select_plan">Hide</button>
+<button class="select_plan1">Show</button>
+
+<table width="65%" height="10" border="2" id="Table11">
+  <tr class="header">
+    <th width="10%" style="width:40%;">PLAN NAME</th>
+    <th width="10%" style="width:10%;">PLAN CODE</th>
+    <th width="60%" style="width:150%;">NEPALI PLAN NAME</th>
+    <th width="60%" style="width:60%;">PRODUCT DETAILS</th>       
+  </tr>
+  <tr>
+    <td>Endowment Assurance</td>
+    <td >11</td>
+    <td>सुरक्षित जीवन बीमा -11</td>
+    <td >CLICK</td>
+  </tr>
+  <tr>
+    <td>Jiwan Jyoti Plan</td>
+    <td >15</td>
+    <td>जीवन ज्योति बीमा योजना -15</td>
+    <td >CLICK</td>
+  </tr>
+  <tr>
+    <td>Rural Endowment Assurance</td>
+    <td >16</td>
+    <td>ग्रामीण सावधिक जीवन बीमालेख -16</td>
+    <td >CLICK</td>
+  </tr>
+  <tr>
+    <td>Micro Endowment</td>
+    <td >17</td>
+    <td>सावधिक लघु जीवन बीमा -17</td>
+    <td >CLICK</td>
+  </tr>
+  <tr>
+    <td>Naulo Dhana Barsha</td>
+    <td >25</td>
+    <td>नौलो धनवर्षा जीवन बीमा -25</td>
+    <td >CLICK</td>
+  </tr>
+  <tr>
+    <td>Naulo Jiwan Sambridhi</td>
+    <td >26</td>
+    <td>नौलो जीवन सम्बृद्धि जीवन बीमा -26</td>
+    <td >CLICK</td>
+  </tr>
+  <tr>
+    <td>Jeevan Unnati</td>
+    <td >27</td>
+    <td>जीवन उन्नति -27</td>
+    <td >CLICK</td>
+  </tr>
+  <tr>
+    <td><a href="nepallife-child.html">Child Endowment Plan</a></td>
+    <td >51</td>
+    <td>केटा-केटी सावधिक जीवन बीमा -51</td>
+    <td >CLICK</td>
+  </tr>
+  <tr>
+    <td>Child Education Plan</td>
+    <td >53</td>
+    <td>नेपाल लाइफ सुनिश्चित भविष्य तथा शिक्षा -53</td>
+    <td >CLICK</td>
+  </tr>
+  <tr>
+    <td>Jiwan Laxmi Plan</td>
+    <td >61</td>
+    <td>जीवन लक्ष्मी बीमा योजना -61</td>
+    <td >CLICK</td>
+  </tr>
+  <tr>
+    <td><a href="nepallife-Sahara.html">Jiwan Sahara Plan</a></td>
+    <td >62</td>
+    <td>जीवन सहारा बीमा योजना -62</td>
+    <td ><a href="nepallife-Sahara.html">DETAILS </a></td>
+  </tr>
+  <tr>
+    <td>Jiwan Sarathi</td>
+    <td >63</td>
+    <td>जीवन शारथी बीमा योजना -63</td>
+    <td >CLICK</td>
+  </tr>
+  <tr>
+    <td>Term Life Insurance Plan</td>
+    <td >65</td>
+    <td>म्यादी जीबन बीमा -65</td>
+    <td >CLICK</td>
+  </tr>
+  <tr>
+    <td>Micro Term Life Insurance</td>
+    <td >66</td>
+    <td>म्यादी लघु  जीबन बीमालेख -66</td>
+    <td >CLICK</td>
+  </tr>
+  <tr>
+    <td>Smart Life (Jeevan Suraksha Term Life)    Insurance</td>
+    <td >68</td>
+    <td>जीवन सुरक्षा जीवन बीमा योजना -68</td>
+    <td >CLICK</td>
+  </tr>
+  <tr>
+    <td>Sadabahar Jivan</td>
+    <td >69</td>
+    <td>NULL</td>
+    <td >CLICK</td>
+  </tr>
+  </table>
+<p>&nbsp;</p>
+</body>
+    
+    </html>
+    
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".select_plan").click(function(){
+    $("Table").hide();
+  });
+  $(".select_plan1").click(function(){
+    $("Table").show();
+  });
+});
+</script>
+
+
+<script>
+function select_plan() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("SELECT_PLAN");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("Table11");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
