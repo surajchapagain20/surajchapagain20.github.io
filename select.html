@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#Table11 {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#Table11 {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#Table11 th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#Table11 tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#Table11 tr.header, #Table11 tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<h2>Premium Calculator</h2>
+
+<input type="text" id="SELECT_AGE" onkeyup="select_age()" placeholder="Search for names.." title="Type in a name">
+
+<table id="Table11" action="hide">
+  <tr class="header">
+    <th style="width:60%;">AGE</th>
+    <th style="width:40%;">TERM</th>
+	<th style="width:40%;">RATE</th>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>15</td>
+	<td>71.2</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>10</td>
+	<td>71.2</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>20</td>
+	<td>71.2</td>
+  </tr><tr>
+    <td>16</td>
+    <td>25</td>
+	<td>71.2</td>
+  </tr>
+    <tr>
+    <td>17</td>
+    <td>15</td>
+	<td>71.2</td>
+  </tr>
+    <tr>
+    <td>18</td>
+    <td>15</td>
+	<td>70.2</td>
+  </tr>
+    <tr>
+    <td>19</td>
+    <td>15</td>
+	<td>69.2</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>15</td>
+	<td>68.2</td>
+  </tr>
+    <tr>
+    <td>21</td>
+    <td>15</td>
+	<td>67.2</td>
+  </tr>
+  
+</table>
+
+<script>
+function select_age() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("SELECT_AGE");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("Table11");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>
