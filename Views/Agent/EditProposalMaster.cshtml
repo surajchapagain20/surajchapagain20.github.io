@@ -1,0 +1,110 @@
+﻿@model AgencyLicense.Models.nlicProposalMaster
+
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+<script src="~/Scripts/bootstrap.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+@using (Html.BeginForm("EditProposalMaster", "Agent", FormMethod.Post))
+{
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>View</title>
+    </head>
+    <body>
+        <div style="width:88%">
+            <table class="table table-bordered">
+                <tr>
+                    <td colspan="2" style="font-size:15px;border: 2px solid #767676;text-align:center;color:white;font-weight:bold;background-color:#337ab7;">
+                        <h4 style="font-size:20px;font-weight:bold">Edit Proposal Master : @Html.DisplayFor(model => model.ProposalNo) </h4>
+                    </td>
+                </tr>
+                <tr id="ref">
+                    <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                        @Html.LabelFor(model => model.ProposalNo, htmlAttributes: new { })
+                    </td>
+                    <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                        @Html.EditorFor(model => model.ProposalNo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ProposalNo, "", new { @class = "text-danger" })
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                        @Html.LabelFor(model => model.BrCode, htmlAttributes: new { })
+                    </td>
+                    <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                        @Html.EditorFor(model => model.BrCode, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.BrCode, "", new { @class = "text-danger" })
+                    </td>
+                </tr>
+                <!--SURAJ EDITED-->
+                <tr>
+                    <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                        @Html.LabelFor(model => model.Name, htmlAttributes: new { })
+                    </td>
+                    <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </td>
+                </tr>
+                <!--SURAJ EDITED-->
+                <tr>
+                    <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                        @Html.LabelFor(model => model.SCName, htmlAttributes: new { })
+                    </td>
+                    <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                        @Html.EditorFor(model => model.SCName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SCName, "", new { @class = "text-danger" })
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                        GroupId
+                    </td>
+                    <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                        @Html.DropDownList("GroupId", null, htmlAttributes: new { @class = "form-control" })
+                    </td>
+                </tr>
+
+
+                <tr style="font-size:13px;border: 2px solid #767676; background-color:lightgray;">
+                    <td colspan="2" style="width:100%">
+
+                        <table class="table">
+                            <tbody>
+                                <tr style="background-color:lightgray;">
+                                    <td style="text-align:center;width:25%">
+                                        <input type="submit" name="cnBtn" value="Cancel" class="btn btn-danger" />
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-offset-2 col-md-10">
+                                                <input type="submit" name="saveBtn" value="Save" class="btn btn-success" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+    </body>
+</html>
+}
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#ref").hide();
+
+        });
+    </script>
+
+}

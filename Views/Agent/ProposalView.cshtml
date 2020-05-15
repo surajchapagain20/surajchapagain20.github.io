@@ -1,0 +1,105 @@
+﻿@model AgencyLicense.Models.nlicProposalMaster
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+<script src="~/Scripts/bootstrap.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ProposalView</title>
+</head>
+<body>
+    <div style="font-weight: bold;text-align: center;">
+        <d1 class="heading">Proposal Master </d1>
+        <br />
+    </div>
+    <div>
+        <table class="table table-bordered">
+            <tr>
+                <td style="font-size:15px;border: 2px solid #767676;text-align:center;color:white;font-weight:bold;background-color:#337ab7;">
+                    <h4 style="font-size:20px;font-weight:bold">Policy No</h4>
+                </td>
+                <td id="policyNo" style="font-size:15px;border: 2px solid #767676;text-align:center;color:white;font-weight:bold;background-color:#337ab7;">
+                    <h4 style="font-size:20px;font-weight:bold"> @Html.DisplayFor(model => model.PolicyNo) </h4>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    ProposalNo
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.ProposalNo)
+                </td>
+            </tr>
+            <!-- SURAJ EDITED-->
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    Proposal Name :
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.Name)
+                </td>
+            </tr>
+            <!--SURAJ EDITED-->
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    BrCode
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.BrCode)
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    SCName
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.SCName)
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    GroupID
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.GroupID)
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+    <table class=" table">
+        <tbody>
+            <tr>
+
+                <td style="font-size:13px;text-align: left;">
+                    <button class="btn btn-success" onclick="location.href='@Url.Action("Underwriting", "Agent")';return false; ">Back to Search</button>
+                </td>
+
+                <td id="editbtn">
+                    <button style="font-size:13px;font-weight:normal" class="btn btn-primary" onclick="location.href='@Url.Action("EditProposalMaster", "Agent", new { ProposalNo = Model.ProposalNo })';return false; ">Edit ProposalMaster</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+@section Scripts {
+    <script>
+    $(document).ready(function () {
+        $("#editbtn").show();
+        var pol = $.trim($("#policyNo").text());
+        if (!pol || pol.length === 0 || pol === "0" || pol === "null" || pol === "NULL" || pol === null) {
+            $("#editbtn").show();
+        }
+        else {
+            $("#editbtn").hide();
+        }
+        });
+    </script>
+
+}

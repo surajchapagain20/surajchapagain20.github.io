@@ -1,0 +1,187 @@
+﻿@model AgencyLicense.Models.nlicAgencyLicenseDetails_T
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+<script src="~/Scripts/bootstrap.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AgencyView</title>
+</head>
+<body>
+    <div style="font-weight: bold;text-align: center;">
+        <d1 class="heading">Uploaded Agency License Details </d1>
+        <br />
+    </div>
+    <div>
+        <table class="table table-bordered">
+            <tr>
+                <td style="font-size:15px;border: 2px solid #767676;text-align:center;color:white;font-weight:bold;background-color:#337ab7;">
+                    <h4 style="font-size:20px;font-weight:bold">Agency Code</h4>
+                </td>
+                <td id="agencyCode" style="font-size:15px;border: 2px solid #767676;text-align:center;color:white;font-weight:bold;background-color:#337ab7;">
+                    <h4 style="font-size:20px;font-weight:bold"> @Html.DisplayFor(model => model.AgencyCode) </h4>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    SN
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.SN)
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    BrCode
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.BrCode)
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    Agency Name
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.AgencyName)
+                </td>
+            </tr>
+            <!-- //suraj edited-->
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    Gender (M / F)
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.Gender)
+                </td>
+            </tr>
+            <!-- //suraj edited-->
+
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    CitizenshipNo
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.CitizenshipNo)
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    Fathers Name
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.FathersName)
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    GrandFather Name
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.GrandFatherName)
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    Mobile No
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.MobileNo)
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    District
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.District)
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    DOB
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.DOB)
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    BCCode
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.BCCode)
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    AMCode
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.AMCode)
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    Remarks
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.Remarks)
+                </td>
+            </tr>
+            <!-- //suraj edited-->
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    Training_StartDate
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.Training_StartDate)
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    Training_EndDate
+                </td>
+                <td style="font-size:13px;border: 2px solid #767676;text-align:left;color:darkblue;font-weight:normal;background-color:#e8e8e8;">
+                    @Html.DisplayFor(model => model.Training_EndDate)
+                </td>
+            </tr>
+            <!-- //suraj edited-->
+        </table>
+
+    </div>
+    <table class=" table">
+        <tbody>
+            <tr>
+
+                <td style="font-size:13px;text-align: left;">
+                    <button class="btn btn-success" onclick="location.href='@Url.Action("Index", "Agent")';return false; ">Back to Search</button>
+                </td>
+
+                <td id="editbtn">
+                    <button style="font-size:13px;font-weight:normal" class="btn btn-primary" onclick="location.href='@Url.Action("EditAgency", "Agent", new { SN = Model.SN })';return false; ">Edit Agent</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+@section Scripts {
+    <script>
+    $(document).ready(function () {
+        $("#editbtn").show();
+        var AgencyCode = $.trim($("#agencyCode").text());
+        if (!AgencyCode || AgencyCode.length === 0 || AgencyCode === "0" || AgencyCode === "null" || AgencyCode === "NULL" || AgencyCode === null) {
+            $("#editbtn").show();
+        }
+        else {
+            $("#editbtn").hide();
+        }
+        });
+    </script>
+
+}

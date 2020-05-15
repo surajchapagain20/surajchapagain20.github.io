@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MainIndex</title>
+</head>
+<body>
+    <div>
+                <center><tr><img src="~/Image_css/logo-new.png" title="NEPAL LIFE INSURANCE COMPANY LTD"/></tr><p></p></center>
+        <table class=" table">
+            <tbody>
+                <tr>
+                      <tr><a href="https://webapp.nepallife.com.np/nlicoffice/OnlineProposal"><img src="~/Image_css/register_NEW.png" width="150" height="80" title="Register Proposal"/></a><p></p><p></p></tr>
+                    <td style="font-size:13px;text-align: left;">
+                        <button class="btn btn-success" onclick="location.href='@Url.Action("Index", "Agent")';return false; ">Agent Search</button>
+                    </td>
+
+                    <td style="font-size:13px;text-align: left;">
+                        <button class="btn btn-success" onclick="location.href='@Url.Action("Underwriting", "Agent")';return false; ">Proposal Search</button>
+                    </td>
+
+                     <td style="font-size:13px;text-align: left;">
+                        <!-- <button class="btn btn-success"><a href="https://webapp.nepallife.com.np/ns/ClaimMgmt/ClaimMain.aspx"> Claim Reporting </a></button>-->
+                        <button class="btn btn-success" onclick="window.location='https://webapp.nepallife.com.np/ns/ClaimMgmt/ClaimMain.aspx';return false; ">Claim Reporting </button>
+                    </td>
+   
+                    <td style="font-size:13px;text-align: left;">
+                        <button class="btn btn-success" onclick="window.location='https://surajchapagain20.github.io/NEPALLIFE_CALCULATOR/';return false; ">Simple Premium Calculation </button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
